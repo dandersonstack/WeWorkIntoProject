@@ -77,7 +77,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'we_eat', #get_env_variable('DATABASE_NAME'),
-        'USER': 'daniel', #get_env_variable('DATABASE_USER'),
+        'USER': 'weeat', #get_env_variable('DATABASE_USER'),
         'PASSWORD': '', #get_env_variable('DATABASE_PASSWORD'),
         'HOST': '',
         'PORT': '',
