@@ -26,6 +26,7 @@ SECRET_KEY = '8fqk%+iilb&jnr92v#jjzebk9c#1+1i0t!$&dun8-kc0v&b81r'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+#TODO: Configure the allowed hosts array
 
 
 # Application definition
@@ -37,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'we_eat_app',
 ]
 
 MIDDLEWARE = [
@@ -49,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'djangoBackWeEat.urls'
+ROOT_URLCONF = 'project.urls'
 
 TEMPLATES = [
     {
@@ -67,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'djangoBackWeEat.wsgi.application'
+WSGI_APPLICATION = 'project.wsgi.application'
 
 
 # Database

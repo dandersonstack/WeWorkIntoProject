@@ -4,3 +4,4 @@ djangoBackWeEat/*.pyc
 djangoBackWeEat/__pycache__
 .idea/*
 .env
+.venv
