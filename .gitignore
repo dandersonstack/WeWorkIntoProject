@@ -2,3 +2,4 @@ djangoBackWeEat/env
 djangoBackWeEat/*.DS_Store
 djangoBackWeEat/*.pyc
 djangoBackWeEat/__pycache__
+.idea/*
