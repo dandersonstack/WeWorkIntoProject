@@ -7,7 +7,7 @@ const styles = theme => ({
     root: {
         width: '100%',
         height: '20%',
-        backgroundColor: 'blue',
+        backgroundColor: '#cbd0d8',
         borderRadius: '3px',
         borderColor: 'black',
         border: 'thin solid'

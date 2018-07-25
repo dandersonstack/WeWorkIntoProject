@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './App.css';
 import './SimpleMap';
 import Grid from '@material-ui/core/Grid';
-import Background from './assets/tapas-food-top-view-foods-collection-hero-header-77244457.jpg';
+import Background from '../assets/tapas-food-top-view-foods-collection-hero-header-77244457.jpg';
 import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField'
 
@@ -21,7 +20,7 @@ const styles = theme => ({
         paddingTop: '50px',
         paddingBottom: '10px',
         margin: '0px',
-        fontSize: '40px',
+        fontSize: '60px',
         color: 'white',
         fontFamily: 'Marker Felt, fantasy'
     },
@@ -73,7 +72,7 @@ class AppHeader extends Component {
                     <Grid item xs={12} sm={4}>
                         <h1 className={classes.appTitle}>We Eat</h1>
                         <TextField
-                            defaultValue="resteraunt name"
+                            defaultValue="restaurant"
                             id="bootstrap-input"
                             InputProps={{
                                 disableUnderline: true,

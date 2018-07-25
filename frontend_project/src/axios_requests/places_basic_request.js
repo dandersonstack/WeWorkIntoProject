@@ -10,7 +10,7 @@ async function grabNearbyFromLcation(location_string, radius, extraParamsHash) {
             params: {
                 key: GOOGLE_API_KEY,
                 location: location_string,
-                radius: radius,
+                radius,
                 type: 'restaurant'
             }
         })
@@ -33,7 +33,24 @@ async function unlockPlaceInformation(place_id) {
     }
 }
 
+async function grabResterauntsFromLatLng(lat, lng) {
+    try {
+        return await axios.get(`http://localhost:8000/resteraunts`, {
+            params: {
+                lat: lat,
+                lng: lng,
+            }
+        }).data;
+    } catch(error) {
+        console.log(error)
+    }
+}
+
+
 module.export = {
     grabNearbyFromLcation: grabNearbyFromLcation,
     unlockPlaceInformation: unlockPlaceInformation
 };
+
+
+let helper7 = grabResterauntsFromLatLng(32.072454, 34.778935);

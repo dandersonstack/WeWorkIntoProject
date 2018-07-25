@@ -1,17 +1,13 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import PropTypes from 'prop-types';
 import './App.css';
-import './SimpleMap';
+import './components/SimpleMap';
 import Grid from '@material-ui/core/Grid';
-import SimpleMap from "./SimpleMap";
-import Background from './assets/tapas-food-top-view-foods-collection-hero-header-77244457.jpg';
+import SimpleMap from "./components/SimpleMap";
 import { withStyles } from '@material-ui/core/styles';
-import MapDetailsTab from './MapDetailsTab';
-import ResterauntList from './ResterauntList';
-import FiltersContainer from './FiltersContainer';
-import TextField from '@material-ui/core/TextField'
-import AppHeader from './AppHeader';
+import ResterauntList from './components/ResterauntList';
+import FiltersContainer from './components/FiltersContainer';
+import AppHeader from './components/AppHeader';
 
 
 const styles = theme => ({
@@ -25,8 +21,13 @@ const styles = theme => ({
     },
     listAndFiltersGrid: {
         padding: '3px',
-
+        paddingLeft: '5px',
+        marginBottom: '10px',
+        overflow: 'scroll',
     },
+    gridContainer: {
+        marginTop: '3px',
+    }
 });
 
 class App extends Component {
@@ -36,7 +37,7 @@ class App extends Component {
         return (
           <div className="App">
             <AppHeader/>
-              <Grid container spacing={0} >
+              <Grid container spacing={0} className={classes.gridContainer}>
                   <Grid item xs={12} sm={4} className={classes.listAndFiltersGrid}>
                       <FiltersContainer/>
                       <ResterauntList/>
