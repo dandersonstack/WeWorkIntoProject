@@ -1,7 +1,32 @@
 djangoBackWeEat/env
 djangoBackWeEat/*.DS_Store
-djangoBackWeEat/*.pyc
-djangoBackWeEat/__pycache__
+project/*.pyc
+project/__pycache__
 .idea/*
 .env
 .venv
+
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+frontend_project//node_modules
+
+# testing
+frontend_project//coverage
+
+# production
+frontend_project//build
+
+# misc
+frontend_project/.DS_Store
+frontend_project/.env.local
+frontend_project/.env.development.local
+frontend_project/.env.test.local
+frontend_project/.env.production.local
+
+frontend_project/npm-debug.log*
+frontend_project/yarn-debug.log*
+frontend_project/yarn-error.log*
+
+we_eat_app/__pycache__/*
+project/__pycache__/*
