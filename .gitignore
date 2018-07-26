@@ -3,6 +3,7 @@ djangoBackWeEat/*.DS_Store
 project/*.pyc
 project/__pycache__
 .idea/*
+
 .env
 .venv
 
@@ -24,9 +25,15 @@ frontend_project/.env.development.local
 frontend_project/.env.test.local
 frontend_project/.env.production.local
 
+frontend_project/.idea/
+
+
 frontend_project/npm-debug.log*
 frontend_project/yarn-debug.log*
 frontend_project/yarn-error.log*
 
-we_eat_app/__pycache__/*
-project/__pycache__/*
+we_eat_app/__pycache__
+project/__pycache__
+
+frontend_project/.storybook/
+frontend_project/stories
