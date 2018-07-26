@@ -1,32 +1,35 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './SimpleMap';
-import Grid from '@material-ui/core/Grid';
-import Background from '../assets/tapas-food-top-view-foods-collection-hero-header-77244457.jpg';
+import Background from '../assets/cubed-watermelon-mold-640x533.jpg';
 import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField'
+import Flexbox from 'flexbox-react';
+import SearchIcon from './SearchIcon';
 
 
 const styles = theme => ({
     appHeader: {
-        backgroundColor: '#222',
         height: '22vh',
-        color: 'white',
+        color: 'black',
         backgroundImage: `url(${Background})`,
-        backgroundSize: 'cover'
+        backgroundSize: 'cover',
+    },
+    appDescription: {
+      paddingRight: '20px',
+        fontFamily: 'Marker Felt, fantasy'
     },
     appTitle: {
         textAlign: 'center',
-        paddingTop: '50px',
         paddingBottom: '10px',
         margin: '0px',
-        fontSize: '60px',
+        fontSize: '5vw',
         color: 'white',
         fontFamily: 'Marker Felt, fantasy'
     },
     searchContainer: {
         backgroundColor: 'white',
-        padding: '10px',
+        padding: '14px',
     },
     bootstrapRoot: {
         padding: 0,
@@ -38,7 +41,7 @@ const styles = theme => ({
         borderRadius: 4,
         backgroundColor: theme.palette.common.white,
         border: '1px solid #ced4da',
-        fontSize: 16,
+        fontSize: '1.7vw',
         padding: '10px 12px',
         width: 'calc(100% - 24px)',
         transition: theme.transitions.create(['border-color', 'box-shadow']),
@@ -67,12 +70,14 @@ class AppHeader extends Component {
         const {classes} = this.props;
         return (
 
-            <header className={ classes.appHeader }>
-                <Grid container spacing={0} >
-                    <Grid item xs={12} sm={4}>
-                        <h1 className={classes.appTitle}>We Eat</h1>
+            <Flexbox className={ classes.appHeader } flexDirection="row" element="header">
+                <Flexbox flexGrow={.8}></Flexbox>
+                <Flexbox flexGrow={1} flexDirection="column" alignItems="center">
+                    <Flexbox flexGrow={1}></Flexbox>
+                    <h1 className={classes.appTitle}>We Eat^3</h1>
+                    <Flexbox flexDirection="row">
                         <TextField
-                            defaultValue="restaurant"
+                            defaultValue="please enter an address"
                             id="bootstrap-input"
                             InputProps={{
                                 disableUnderline: true,
@@ -81,9 +86,11 @@ class AppHeader extends Component {
                                     input: classes.bootstrapInput,
                                 },
                             }}/>
-                    </Grid>
-                </Grid>
-            </header>
+                    </Flexbox>
+                    <Flexbox flexGrow={1}></Flexbox>
+                </Flexbox>
+                <Flexbox flexGrow={.8}></Flexbox>
+            </Flexbox>
 
         );
     }
