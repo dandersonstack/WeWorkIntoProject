@@ -7,7 +7,7 @@ import SimpleMap from "./components/SimpleMap";
 import { withStyles } from '@material-ui/core/styles';
 import ResterauntList from './components/ResterauntList';
 import FiltersContainer from './components/FiltersContainer';
-import AppHeader from './components/AppHeader';
+import AppHeader from './components/AppHeaderComponent/AppHeader';
 
 
 const styles = theme => ({
