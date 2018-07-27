@@ -9,6 +9,7 @@
     "fixed-data-table": "^0.6.5",
     "flexbox-react": "^4.4.0",
     "google-map-react": "^1.0.5",
+    "rc-slider": "^8.6.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-flexbox-grid": "^2.1.2",

@@ -41,20 +41,20 @@ class SimpleMap extends Component {
                     defaultCenter={this.props.center}
                     defaultZoom={this.props.zoom}
                 >
-                    {
-                        ELEMENTS_TO_RENDER.map((comp, i) =>{
-                            return(
-                                <PlaceIcon
-                                    key={i}
-                                    styles={classes.icon}
-                                    lat={comp.lat}
-                                    lng={comp.lng}
-                                    text={comp.name}
-                                    color={'red'}
-                                />
-                            )
-                        })
-                    }
+                    {/*{*/}
+                        {/*ELEMENTS_TO_RENDER.map((comp, i) =>{*/}
+                            {/*return(*/}
+                                {/*<PlaceIcon*/}
+                                    {/*key={i}*/}
+                                    {/*styles={classes.icon}*/}
+                                    {/*lat={comp.lat}*/}
+                                    {/*lng={comp.lng}*/}
+                                    {/*text={comp.name}*/}
+                                    {/*color={'red'}*/}
+                                {/*/>*/}
+                            {/*)*/}
+                        {/*})*/}
+                    {/*}*/}
                 </GoogleMapReact>
             </div>
         );

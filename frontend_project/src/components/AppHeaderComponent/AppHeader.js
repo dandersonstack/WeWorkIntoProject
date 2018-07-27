@@ -11,7 +11,6 @@ class AppHeader extends Component {
     render() {
         const {classes} = this.props;
         return (
-
             <Flexbox className={ classes.appHeader } flexDirection="row" element="header">
                 <Flexbox flexGrow={.8}></Flexbox>
                 <Flexbox flexGrow={1} flexDirection="column" alignItems="center">
