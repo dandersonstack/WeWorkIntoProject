@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
-import ResterauntIcon from './ResterauntIcon';
+// import ResterauntIcon from './ResterauntIcon';
 import {GOOGLE_API_KEY, ELEMENTS_TO_RENDER} from '../constants';
 import PlaceIcon from '@material-ui/icons/Place';
 import { withStyles } from '@material-ui/core/styles';
@@ -9,6 +9,9 @@ const styles = theme => ({
     icon: {
         fontSize: '30px',
         stopColor: 'red'
+    },
+    mainMap: {
+        borderRadius: '10px'
     }
 
 });
@@ -35,28 +38,27 @@ class SimpleMap extends Component {
         const classes = this.props;
         return (
             // Important! Always set the container height explicitly
-            <div style={{ height: '76vh', padding: "5px" }}>
                 <GoogleMapReact
+                    styles={classes.mainMap}
                     bootstrapURLKeys={{ key: GOOGLE_API_KEY }}
                     defaultCenter={this.props.center}
                     defaultZoom={this.props.zoom}
                 >
-                    {/*{*/}
-                        {/*ELEMENTS_TO_RENDER.map((comp, i) =>{*/}
-                            {/*return(*/}
-                                {/*<PlaceIcon*/}
-                                    {/*key={i}*/}
-                                    {/*styles={classes.icon}*/}
-                                    {/*lat={comp.lat}*/}
-                                    {/*lng={comp.lng}*/}
-                                    {/*text={comp.name}*/}
-                                    {/*color={'red'}*/}
-                                {/*/>*/}
-                            {/*)*/}
-                        {/*})*/}
-                    {/*}*/}
+                    {
+                        ELEMENTS_TO_RENDER.map((comp, i) =>{
+                            return(
+                                <PlaceIcon
+                                    key={i}
+                                    styles={classes.icon}
+                                    lat={comp.lat}
+                                    lng={comp.lng}
+                                    text={comp.name}
+                                    color={'red'}
+                                />
+                            )
+                        })
+                    }
                 </GoogleMapReact>
-            </div>
         );
     }
 }

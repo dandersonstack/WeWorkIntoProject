@@ -3,10 +3,11 @@ import Background from '../../assets/cubed-watermelon-mold-640x533.jpg';
 const styles = theme => ({
     appHeader: {
         height: '22vh',
+        minHeight: '150px',
         color: 'black',
         backgroundImage: `url(${Background})`,
         backgroundSize: 'cover',
-        borderBottom: 'black'
+        borderBottom: 'thick solid black'
     },
     appDescription: {
         paddingRight: '20px',

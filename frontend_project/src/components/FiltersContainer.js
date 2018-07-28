@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Flexbox from 'flexbox-react';
+import 'rc-slider/assets/index.css';
 import Slider, { createSliderWithTooltip } from 'rc-slider';
 
 const SliderWithTooltip = createSliderWithTooltip(Slider);
@@ -19,63 +20,61 @@ const marks = {
 const styles = theme => ({
     root: {
         width: '100%',
-        maxWidth: '350px',
-        height: '20%',
-        minHeight: '60px',
+        maxWidth: '600px',
+        height: '70px',
+        maxHeight: '200px',
+        padding: '3px',
         backgroundColor: '#cbd0d8',
         borderRadius: '3px',
         borderColor: 'black',
         border: 'thin solid',
-        // alignItems: 'center',
-
 },
     filtersHeader: {
-        fontSize: '2.5vmax',
+        fontSize: '2.5vmin',
         padding: '5px'
     },
     filterItem: {
         paddingBottom:'10px'
     },
     simpleSlider: {
-        marginRight: '20px',
-        marginLeft: '20px',
-        width: '100%'
+
+        // width: '100%'
     },
     sliderContainer: {
         width: '90%',
+        minWidth: '200px',
+        // height: '10vh',
         paddingBottom:'10px'
     }
 });
 
-function percentFormatter(v) {
-    return `${v} km`;
-}
-
 class FiltersContainer extends Component {
+    state = {
+        value: 10
+    };
 
-
-    // onSliderChange = (value) => {
-    //     log(value);
-    //     this.setState({
-    //         value,
-    //     });
-    // };
-    // onAfterChange = (value) => {
-    //     console.log(value); //eslint-disable-line
-    // };
+    onSliderChange = (value) => {
+        console.log(value);
+        this.setState({
+            value,
+        });
+    };
 
     render() {
-        const {classes} = this.props;
+        const {classes, filterName} = this.props;
+        // const optionalSliderSettings = {
+        //     min: 0,
+        //
+        // };
+
         return (
-            <Flexbox  className={classes.root} flexDirection="column" >
-                <Flexbox  className={classes.filtersHeader}>
-                    <Flexbox flexGrow={1}></Flexbox>
-                    <Flexbox>Distances(km)</Flexbox>
-                    <Flexbox flexGrow={1}></Flexbox>
+            <Flexbox className={classes.root} flexDirection="column" >
+                <Flexbox className={classes.filtersHeader} justifyContent="center">
+                    <Flexbox>{filterName || 'Distance(Km)'}</Flexbox>
                 </Flexbox>
-                <Flexbox className={classes.filterItem} flexDirection="row">
-                    <Flexbox flexGrow={1}></Flexbox>
-                    <Flexbox flexGrow={1} className={classes.sliderContainer}>
+                <Flexbox className={classes.filterItem} flexDirection="row" justifyContent="center">
+                    <div className={classes.sliderContainer}>
+                        {/*TODO: https://github.com/react-component/slider/issues/53*/}
                         <Slider
                             className={classes.simpleSlider}
                             step={5}
@@ -84,9 +83,8 @@ class FiltersContainer extends Component {
                             max={30}
                             marks={marks}
                             defaultValue={10}
-                            onChange={()=>{console.log('hi')}}/>
-                    </Flexbox>
-                    <Flexbox flexGrow={1}></Flexbox>
+                            onChange={this.onSliderChange}/>
+                    </div>
                 </Flexbox>
             </Flexbox>
         );
@@ -95,6 +93,7 @@ class FiltersContainer extends Component {
 
 FiltersContainer.propTypes = {
     classes: PropTypes.object.isRequired,
+    filterName: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(FiltersContainer);

@@ -8,7 +8,7 @@ import { withStyles } from '@material-ui/core/styles';
 import ResterauntList from './components/ResterauntList';
 import FiltersContainer from './components/FiltersContainer';
 import AppHeader from './components/AppHeaderComponent/AppHeader';
-
+import Flexbox from 'flexbox-react';
 
 const styles = theme => ({
     root: {
@@ -24,9 +24,15 @@ const styles = theme => ({
         paddingLeft: '5px',
         marginBottom: '10px',
         overflow: 'scroll',
+        width:"40vw",
     },
     gridContainer: {
         marginTop: '3px',
+    },
+    mapContainer: {
+        height: "76vh",
+        width: "60vw",
+        padding: "5px",
     }
 });
 
@@ -36,16 +42,28 @@ class App extends Component {
         const {classes} = this.props;
         return (
           <div className="App">
-            <AppHeader/>
-              <Grid container spacing={0} className={classes.gridContainer}>
-                  <Grid item xs={12} sm={4} className={classes.listAndFiltersGrid}>
-                      <FiltersContainer/>
+              <AppHeader/>
+              <Flexbox flexDirection="row" className={classes.gridContainer}>
+                  <Flexbox  flexDirection="column" className={classes.listAndFiltersGrid}>
+                      <FiltersContainer filterName="Distance(Km)"/>
+                      <FiltersContainer filterName="Price"/>
+                      <FiltersContainer filterName="Rating"/>
                       <ResterauntList/>
-                  </Grid>
-                  <Grid item xs={12} sm={8}>
+                  </Flexbox>
+                  <Flexbox  className={classes.mapContainer} >
                       <SimpleMap/>
-                  </Grid>
-              </Grid>
+                  </Flexbox>
+
+                  {/*<Grid container spacing={0} >*/}
+                      {/*<Grid item xs={12} sm={4} className={classes.listAndFiltersGrid}>*/}
+
+                      {/*</Grid>*/}
+                      {/*<Grid item xs={12} sm={8}>*/}
+
+                      {/*</Grid>*/}
+                  {/*</Grid>*/}
+              </Flexbox>
+
           </div>
         );
         }
