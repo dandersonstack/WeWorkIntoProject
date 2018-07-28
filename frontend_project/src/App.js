@@ -8,7 +8,7 @@ import { withStyles } from '@material-ui/core/styles';
 import ResterauntList from './components/ResterauntList';
 import AppHeader from './components/AppHeaderComponent/AppHeader';
 import Flexbox from 'flexbox-react';
-import FiltersComponentWrapper from './components/FilterComponentWrapper';
+import FiltersComponentWrapper from './components/FiltersToolBar/FiltersToolBar';
 
 const styles = theme => ({
     root: {
@@ -31,7 +31,7 @@ const styles = theme => ({
     },
     mapContainer: {
         height: "76vh",
-        width: "60vw",
+        width: "80%",
         padding: "5px",
     }
 });
@@ -44,7 +44,7 @@ class App extends Component {
           <div className="App">
               <AppHeader/>
               <Flexbox flexDirection="row" className={classes.gridContainer}>
-                  <Flexbox  flexDirection="column" className={classes.listAndFiltersGrid}>
+                  <Flexbox flexDirection="column" className={classes.listAndFiltersGrid}>
                       <FiltersComponentWrapper/>
                       <ResterauntList/>
                   </Flexbox>

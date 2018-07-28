@@ -2,20 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import ListItemAvatar from '@material-ui/core/ListItemAvatar'
-import ResterauntIcon from '@material-ui/icons/Work';
+import Flexbox from 'flexbox-react';
 const styles = theme => ({
     root: {
-        width: '100%',
         backgroundColor: 'grey',
-        marginBottom: '5px',
+        // marginBottom: '5px',
         height: '8vh',
+        border: 'thin solid black',
         borderRadius: '5px',
     },
     itemText: {
       paddingTop: '5px'
     },
+    mainImage: {
+
+    }
 });
 
 class ResterauntListItem extends ListItem {
@@ -23,16 +24,23 @@ class ResterauntListItem extends ListItem {
         const {classes, primaryText} = this.props;
         let value = 1;
         return(
-            <div className={classes.root}
+            <Flexbox className={classes.root}
                 key={value}
                 role={undefined}
                 onClick={()=>{console.log('hi')}}
+                flexDirection="row"
             >
-                <ListItemAvatar>
-                    <ResterauntIcon />
-                </ListItemAvatar>
-                <ListItemText className={classes.itemText} primary={primaryText}/>
-            </div>
+                <Flexbox>
+                    <Flexbox className={classes.mainImage}>
+                        <image src="https://vignette.wikia.nocookie.net/logopedia/images/1/1e/Plain-mcdonalds-logo.jpg/revision/latest?cb=20161208155014"></image>
+                    </Flexbox>
+                </Flexbox>
+                <Flexbox flexGrow={1}></Flexbox>
+                <Flexbox>
+
+                </Flexbox>
+
+            </Flexbox>
     );
     }
 }

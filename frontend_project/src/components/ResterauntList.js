@@ -9,6 +9,8 @@ import ResterauntListItem from './ResterauntListItem';
 const styles = theme => ({
     root: {
         width: '100%',
+        // maxHeight: '100%',
+        overflow: 'scroll',
     },
 });
 
@@ -16,7 +18,29 @@ function ResterauntList(props) {
     const { classes } = props;
     return (
         <List component="nav" className={classes.root}>
-            <ResterauntListItem button primaryText='Dennys Bar and Grill'>
+            <ResterauntListItem primaryText='Dennys Bar and Grill'>
+            </ResterauntListItem>
+            <ResterauntListItem primaryText='Dennys Bar and Grill'>
+            </ResterauntListItem>
+            <ResterauntListItem primaryText='Dennys Bar and Grill'>
+            </ResterauntListItem>
+            <ResterauntListItem primaryText='Dennys Bar and Grill'>
+            </ResterauntListItem>
+            <ResterauntListItem primaryText='Dennys Bar and Grill'>
+            </ResterauntListItem>
+            <ResterauntListItem primaryText='Dennys Bar and Grill'>
+            </ResterauntListItem>
+            <ResterauntListItem primaryText='Dennys Bar and Grill'>
+            </ResterauntListItem>
+            <ResterauntListItem primaryText='Dennys Bar and Grill'>
+            </ResterauntListItem>
+            <ResterauntListItem primaryText='Dennys Bar and Grill'>
+            </ResterauntListItem>
+            <ResterauntListItem primaryText='Dennys Bar and Grill'>
+            </ResterauntListItem>
+            <ResterauntListItem primaryText='Dennys Bar and Grill'>
+            </ResterauntListItem>
+            <ResterauntListItem primaryText='Dennys Bar and Grill'>
             </ResterauntListItem>
         </List>
     );
