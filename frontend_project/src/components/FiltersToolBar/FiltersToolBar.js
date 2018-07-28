@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Flexbox from 'flexbox-react';
 import 'rc-slider/assets/index.css';
@@ -32,9 +31,8 @@ class FiltersToolBar extends Component {
 
                     <Flexbox className={classes.filtersHeaderText} flexDirection="column">
                         <Flexbox flexGrow={1}></Flexbox>
-                        <Flexbox>{this.state.collapsed ? 'Hide Filters': 'Show Filters'}</Flexbox>
+                        <Flexbox>{!this.state.collapsed ? 'Hide Filters': 'Show Filters'}</Flexbox>
                         <Flexbox flexGrow={1}></Flexbox>
-
                     </Flexbox>
                     <Flexbox flexGrow={1}></Flexbox>
                     <Flexbox className={classes.filtersHeaderIcon}>

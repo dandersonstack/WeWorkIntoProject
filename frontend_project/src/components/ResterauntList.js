@@ -2,47 +2,49 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
 import ResterauntListItem from './ResterauntListItem';
+import Flexbox from 'flexbox-react';
+
 
 const styles = theme => ({
     root: {
         width: '100%',
-        // maxHeight: '100%',
         overflow: 'scroll',
+        maxHeight: '100vh',
     },
 });
 
 function ResterauntList(props) {
     const { classes } = props;
     return (
-        <List component="nav" className={classes.root}>
-            <ResterauntListItem primaryText='Dennys Bar and Grill'>
-            </ResterauntListItem>
-            <ResterauntListItem primaryText='Dennys Bar and Grill'>
-            </ResterauntListItem>
-            <ResterauntListItem primaryText='Dennys Bar and Grill'>
-            </ResterauntListItem>
-            <ResterauntListItem primaryText='Dennys Bar and Grill'>
-            </ResterauntListItem>
-            <ResterauntListItem primaryText='Dennys Bar and Grill'>
-            </ResterauntListItem>
-            <ResterauntListItem primaryText='Dennys Bar and Grill'>
-            </ResterauntListItem>
-            <ResterauntListItem primaryText='Dennys Bar and Grill'>
-            </ResterauntListItem>
-            <ResterauntListItem primaryText='Dennys Bar and Grill'>
-            </ResterauntListItem>
-            <ResterauntListItem primaryText='Dennys Bar and Grill'>
-            </ResterauntListItem>
-            <ResterauntListItem primaryText='Dennys Bar and Grill'>
-            </ResterauntListItem>
-            <ResterauntListItem primaryText='Dennys Bar and Grill'>
-            </ResterauntListItem>
-            <ResterauntListItem primaryText='Dennys Bar and Grill'>
-            </ResterauntListItem>
-        </List>
+        <Flexbox height='20%' flexGrow={1}>
+            <List component="nav" className={classes.root}>
+                <ResterauntListItem primaryText='Dennys Bar and Grill'>
+                </ResterauntListItem>
+                <ResterauntListItem primaryText='Dennys Bar and Grill'>
+                </ResterauntListItem>
+                <ResterauntListItem primaryText='Dennys Bar and Grill'>
+                </ResterauntListItem>
+                <ResterauntListItem primaryText='Dennys Bar and Grill'>
+                </ResterauntListItem>
+                <ResterauntListItem primaryText='Dennys Bar and Grill'>
+                </ResterauntListItem>
+                <ResterauntListItem primaryText='Dennys Bar and Grill'>
+                </ResterauntListItem>
+                <ResterauntListItem primaryText='Dennys Bar and Grill'>
+                </ResterauntListItem>
+                <ResterauntListItem primaryText='Dennys Bar and Grill'>
+                </ResterauntListItem>
+                <ResterauntListItem primaryText='Dennys Bar and Grill'>
+                </ResterauntListItem>
+                <ResterauntListItem primaryText='Dennys Bar and Grill'>
+                </ResterauntListItem>
+                <ResterauntListItem primaryText='Dennys Bar and Grill'>
+                </ResterauntListItem>
+                <ResterauntListItem primaryText='Dennys Bar and Grill'>
+                </ResterauntListItem>
+            </List>
+        </Flexbox>
     );
 }
 

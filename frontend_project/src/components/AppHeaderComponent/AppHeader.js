@@ -18,7 +18,7 @@ class AppHeader extends Component {
                     <h1 className={classes.appTitle}>We Eat^3</h1>
                     <Flexbox flexDirection="row">
                         <TextField
-                            defaultValue="please enter an address"
+                            defaultValue="144 דרך מנחם בגין"
                             id="bootstrap-input"
                             InputProps={{
                                 disableUnderline: true,

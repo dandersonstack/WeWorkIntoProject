@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
-// import ResterauntIcon from './ResterauntIcon';
 import {GOOGLE_API_KEY, ELEMENTS_TO_RENDER} from '../constants';
 import PlaceIcon from '@material-ui/icons/Place';
 import { withStyles } from '@material-ui/core/styles';
