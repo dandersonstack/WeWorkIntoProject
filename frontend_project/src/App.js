@@ -6,9 +6,9 @@ import Grid from '@material-ui/core/Grid';
 import SimpleMap from "./components/SimpleMap";
 import { withStyles } from '@material-ui/core/styles';
 import ResterauntList from './components/ResterauntList';
-import FiltersContainer from './components/FiltersContainer';
 import AppHeader from './components/AppHeaderComponent/AppHeader';
 import Flexbox from 'flexbox-react';
+import FiltersComponentWrapper from './components/FilterComponentWrapper';
 
 const styles = theme => ({
     root: {
@@ -45,9 +45,7 @@ class App extends Component {
               <AppHeader/>
               <Flexbox flexDirection="row" className={classes.gridContainer}>
                   <Flexbox  flexDirection="column" className={classes.listAndFiltersGrid}>
-                      <FiltersContainer filterName="Distance(Km)"/>
-                      <FiltersContainer filterName="Price"/>
-                      <FiltersContainer filterName="Rating"/>
+                      <FiltersComponentWrapper/>
                       <ResterauntList/>
                   </Flexbox>
                   <Flexbox  className={classes.mapContainer} >

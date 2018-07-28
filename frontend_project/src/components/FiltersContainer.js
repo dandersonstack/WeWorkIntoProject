@@ -19,8 +19,6 @@ const marks = {
 
 const styles = theme => ({
     root: {
-        width: '100%',
-        maxWidth: '600px',
         height: '70px',
         maxHeight: '200px',
         padding: '3px',
